@@ -20,21 +20,17 @@ jobs:
           from pathlib import Path
           import re
 
-          # ---------- index.html ----------
           p = Path('index.html')
           text = p.read_text(encoding='utf-8')
 
-          # Remove the consulting-style 90-day plan.
           text = re.sub(
               r'\n<section class="section soft">\n  <div class="shell"><p class="eyebrow">90-day action plan</p>.*?</section>\n',
               '\n', text, flags=re.S
           )
 
-          # Make the evidence / interpretation / recommendation layers explicit.
           replacements = {
               '<p class="eyebrow">Core finding</p>': '<p class="eyebrow">Data · Core finding</p>',
               '<p class="eyebrow">Shared language</p>': '<p class="eyebrow">Data · Shared language</p>',
-              '<p class="eyebrow">Interpretation</p>': '<p class="eyebrow">Interpretation</p>',
               '<p class="eyebrow">Why this matters</p>': '<p class="eyebrow">Interpretation · Why this matters</p>',
               '<p class="eyebrow">My strategic point of view</p>': '<p class="eyebrow">Recommendation · Strategic point of view</p>',
               '<p class="eyebrow">What Cyprus employers can do</p>': '<p class="eyebrow">Recommendations</p>',
@@ -43,7 +39,6 @@ jobs:
           for old, new in replacements.items():
               text = text.replace(old, new)
 
-          # Add compact public scoring rubric + a guide to reading the study after Methodology.
           marker = '''    <p class="note"><strong>Important:</strong> this study analyses observable employer communication, not actual employee experience. Public outputs contain no company names or company-level rankings.</p>\n  </div>\n</section>'''
           addition = '''    <p class="note"><strong>Important:</strong> this study analyses observable employer communication, not actual employee experience. Public outputs contain no company names or company-level rankings.</p>
 
@@ -77,7 +72,6 @@ jobs:
           if 'Public scoring rubric' not in text:
               text = text.replace(marker, addition)
 
-          # Add illustrative before/after examples before the recommendations section.
           example_marker = '<section id="recommendations" class="section dark">'
           examples = '''<section class="section soft">
   <div class="shell">
@@ -111,7 +105,6 @@ jobs:
           if 'From generic promise to ownable expression.' not in text:
               text = text.replace(example_marker, examples + example_marker)
 
-          # Add styles for the new research sections to the existing inline style block.
           css = '''
     .rubric-summary{margin-top:34px;padding:28px;border:1px solid var(--line);border-radius:28px;background:#fff;box-shadow:var(--shadow)}
     .rubric-summary h3{font:30px/1.15 Georgia,serif;margin:6px 0 10px}.rubric-summary>p:not(.eyebrow){color:var(--muted)}
@@ -124,7 +117,6 @@ jobs:
 
           p.write_text(text, encoding='utf-8')
 
-          # ---------- methodology.md ----------
           p = Path('methodology.md')
           md = p.read_text(encoding='utf-8')
           md = md.replace('**Version:** 1.0', '**Version:** 1.1')
@@ -191,7 +183,6 @@ The rubric is designed to make the analytical logic inspectable. It does **not**
               md = md.replace(anchor, rubric + '\n' + anchor)
           p.write_text(md, encoding='utf-8')
 
-          # ---------- README.md ----------
           p = Path('README.md')
           rd = p.read_text(encoding='utf-8')
           rd = rd.replace('Research snapshot: **September 2026** · Version **1.0**', 'Research snapshot: **September 2026** · Version **1.1**')
@@ -210,3 +201,5 @@ The rubric is designed to make the analytical logic inspectable. It does **not**
             git commit -m 'Refine study into concise practitioner research'
             git push
           fi
+
+# trigger
