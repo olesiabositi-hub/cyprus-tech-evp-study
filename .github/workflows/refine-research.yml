@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/refine-research.yml'
+      - 'RESEARCH_REFINEMENT_TRIGGER'
 
 permissions:
   contents: write
@@ -201,5 +202,3 @@ The rubric is designed to make the analytical logic inspectable. It does **not**
             git commit -m 'Refine study into concise practitioner research'
             git push
           fi
-
-# trigger
