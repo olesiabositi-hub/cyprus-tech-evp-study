@@ -1,4 +1,4 @@
-# Does Cyprus Tech Have an EVP Problem?
+# What Makes Cyprus Tech Employer Brands Distinctive?
 
 **Independent Employer Brand research · Cyprus Tech · 2026**
 
