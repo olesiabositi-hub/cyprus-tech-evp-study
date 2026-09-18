@@ -1,203 +1,116 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Independent Employer Brand research on Cyprus tech: 30 employers, 90 job ads, and the gap between candidate value and distinctiveness." />
-  <meta property="og:title" content="What Makes Cyprus Tech Employer Brands Distinctive?" />
-  <meta property="og:description" content="30 employers. 90 job ads. One gap between attractiveness and distinctiveness." />
-  <title>What Makes Cyprus Tech Employer Brands Distinctive?</title>
-  <link rel="stylesheet" href="styles.css" />
-  <style>
-    .hero-photo{background-image:url('https://images.unsplash.com/photo-1709589352652-bea9b5459774?auto=format&fit=crop&fm=jpg&q=88&w=3000')!important;background-position:center center!important;filter:saturate(.98) contrast(1.01)!important}
-    .scenic-photo{background-image:url('https://images.unsplash.com/photo-1685473001269-2b1dfb7e85c4?auto=format&fit=crop&fm=jpg&q=88&w=3000')!important;background-position:center center!important;filter:saturate(.96) contrast(1.01)!important}
-    .footerphoto{display:none!important}
-    .rubric-summary{margin-top:34px;padding:28px;border:1px solid var(--line);border-radius:28px;background:#fff;box-shadow:var(--shadow)}
-    .rubric-summary h3{font:30px/1.15 Georgia,serif;margin:6px 0 10px}.rubric-summary>p:not(.eyebrow){color:var(--muted)}
-    .rubric-scale{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:22px 0}.rubric-scale div{padding:16px;border-radius:18px;background:var(--soft);border:1px solid var(--line)}.rubric-scale b{font:30px Georgia,serif;color:var(--teal);display:block}.rubric-scale span{font-size:12px;color:var(--muted);line-height:1.35}.rubric-link{color:var(--teal);font-weight:750;text-decoration:none;border-bottom:1px solid}
-    .research-guide{padding-top:78px;padding-bottom:78px}.examplecards article h3{font:22px/1.1 Georgia,serif;margin:14px 0 8px}.examplecards article p{color:var(--ink)!important}.examplecards .example-before{color:var(--muted)!important;font-style:italic}.examplecards small{display:block;margin-top:16px;color:var(--muted);line-height:1.45}.example-tag{display:inline-block;font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:850;color:var(--teal)}
-    @media(max-width:980px){.rubric-scale{grid-template-columns:1fr 1fr 1fr}}@media(max-width:680px){.rubric-scale{grid-template-columns:1fr}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Olesia Botsieva — Employer Brand Research</title>
+<meta name="description" content="Independent research by Olesia Botsieva on employer brand, recruitment marketing, candidate experience and tech talent.">
+<style>
+:root{
+  --bg:#f5f5f2;--surface:#fff;--ink:#111512;--muted:#68706b;--line:#e2e5e1;
+  --green:#19aa1e;--blue:#3159d8;--coral:#ff6f61;--shadow:0 18px 50px rgba(0,0,0,.07)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1120px;margin:auto;padding:0 24px}
+header{padding:22px 0}
+.nav{display:flex;align-items:center;gap:20px}
+.brand{font-weight:850;letter-spacing:-.02em}
+.nav-links{margin-left:auto;display:flex;gap:18px;font-size:13px;color:#4e5650}
+.hero{padding:76px 0 54px}
+.kicker{font-size:12px;font-weight:850;letter-spacing:.12em;text-transform:uppercase;color:#69716b}
+h1{font-size:clamp(46px,8vw,86px);line-height:.94;letter-spacing:-.06em;margin:15px 0 24px;max-width:900px}
+h1 em{font-style:normal;color:var(--green)}
+.lead{font-size:19px;line-height:1.55;color:#4f5751;max-width:720px}
+.meta{display:flex;gap:9px;flex-wrap:wrap;margin-top:26px}
+.meta span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 12px;font-size:12px}
+.section{padding:28px 0 78px}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:24px}
+.section-head h2{font-size:30px;letter-spacing:-.04em;margin:0}
+.section-head p{margin:0;color:var(--muted);font-size:13px;max-width:520px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:26px;overflow:hidden;box-shadow:0 8px 26px rgba(0,0,0,.035);transition:.2s ease;display:flex;flex-direction:column;min-height:380px}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.visual{height:150px;position:relative;overflow:hidden}
+.visual:before,.visual:after{content:"";position:absolute;border-radius:50%}
+.visual:before{width:210px;height:210px;right:-55px;top:-85px;background:rgba(255,255,255,.28)}
+.visual:after{width:110px;height:110px;left:28px;bottom:-45px;border:18px solid rgba(255,255,255,.38)}
+.cyprus .visual{background:linear-gradient(135deg,#6eb7d8,#3159d8)}
+.no .visual{background:linear-gradient(135deg,#ff9a8f,#ff6f61)}
+.tech .visual{background:linear-gradient(135deg,#66d76a,#19aa1e)}
+.visual .tag{position:absolute;left:18px;top:18px;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.92);font-size:10px;font-weight:850;letter-spacing:.04em;text-transform:uppercase}
+.visual .mark{position:absolute;right:20px;bottom:16px;color:#fff;font-size:42px;font-weight:900;letter-spacing:-.05em}
+.body{padding:22px;display:flex;flex-direction:column;flex:1}
+.body h3{font-size:22px;line-height:1.08;letter-spacing:-.035em;margin:0 0 10px}
+.body p{font-size:14px;line-height:1.55;color:#59615b;margin:0}
+.stats{display:flex;gap:7px;flex-wrap:wrap;margin-top:18px}
+.stats span{font-size:10px;background:#f2f4f1;border-radius:999px;padding:6px 8px;color:#5f665f}
+.open{margin-top:auto;padding-top:24px;font-size:13px;font-weight:850}
+.cyprus .open{color:var(--blue)} .no .open{color:#d54f43} .tech .open{color:#128d17}
+.about{margin-top:16px;background:#111;color:#fff;border-radius:28px;padding:30px;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:end}
+.about h2{font-size:30px;letter-spacing:-.04em;margin:0 0 10px}
+.about p{margin:0;color:#c3c8c4;line-height:1.55}
+.about-links{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}
+.about-links a{border:1px solid #333a35;border-radius:999px;padding:10px 13px;font-size:12px}
+footer{padding:28px 0 44px;color:#858b86;font-size:11px}
+@media(max-width:820px){.grid{grid-template-columns:1fr}.card{min-height:auto}.about{grid-template-columns:1fr}.about-links{justify-content:flex-start}.hero{padding-top:50px}}
+@media(max-width:560px){.wrap{padding:0 16px}.nav-links{display:none}.hero{padding:44px 0 38px}h1{font-size:48px}.lead{font-size:16px}.section-head{align-items:flex-start;flex-direction:column}.section{padding-bottom:54px}.visual{height:125px}}
+</style>
 </head>
 <body>
-<header class="topbar">
-  <div class="shell navwrap">
-    <a class="brand" href="#top">Cyprus Tech EVP Study</a>
-    <nav><a href="#findings">Findings</a><a href="#methodology">Methodology</a><a href="#recommendations">Recommendations</a><a href="#about">About</a></nav>
-  </div>
-</header>
+<header><div class="wrap nav"><div class="brand">Olesia Botsieva · Research</div><div class="nav-links"><a href="#studies">Studies</a><a href="https://olesia.work/" target="_blank" rel="noopener">Portfolio</a><a href="https://www.linkedin.com/in/olesruss/" target="_blank" rel="noopener">LinkedIn</a></div></div></header>
+
 <main>
-<section id="top" class="hero">
-  <div class="hero-photo" aria-hidden="true"></div>
-  <div class="hero-overlay"></div>
-  <div class="shell hero-inner">
-    <div class="hero-copy">
-      <p class="eyebrow">Independent Employer Brand Research · Cyprus Tech · 2026</p>
-      <h1>What Makes Cyprus Tech Employer Brands <em>Distinctive?</em></h1>
-      <p class="lead">30 employers. 90 job ads. One gap between attractiveness and distinctiveness.</p>
-      <p class="intro">I analysed Cyprus-based and Cyprus-hiring technology employers to understand how clearly they communicate candidate value — and how often that value is actually distinctive.</p>
-      <div class="hero-actions"><a class="btn primary" href="#findings">Explore the findings</a><a class="btn ghost" href="#methodology">See methodology</a></div>
-    </div>
-    <aside class="hero-quote"><p>“Across this sample, the opportunity is not more EVP language. It is greater differentiation — and more consistent activation of what employers already genuinely own.”</p><span>Olesia Botsieva</span></aside>
-  </div>
-</section>
+<section class="hero"><div class="wrap">
+  <div class="kicker">Employer Brand · Recruitment Marketing · Tech Talent</div>
+  <h1>Research that makes <em>work</em> easier to understand.</h1>
+  <p class="lead">Independent studies about how companies attract people, communicate with candidates and build a visible employer brand. Each project includes the method, evidence and a simple explanation of what the data means.</p>
+  <div class="meta"><span>3 studies</span><span>2026</span><span>public sources + original analysis</span></div>
+</div></section>
 
-<section class="snapshot">
-  <div class="shell statgrid">
-    <div><strong>30</strong><span>employers</span></div><div><strong>90</strong><span>job ads</span></div><div><strong>30</strong><span>career pages</span></div><div><strong>3</strong><span>communication layers</span></div><div><strong>14</strong><span>EVP themes</span></div>
-  </div>
-</section>
-
-<section class="section intro-section">
-  <div class="shell split">
-    <div><p class="eyebrow">Why this study</p><h2>Many employers sound attractive. Fewer sound unmistakably like themselves.</h2><p>Across the market, the same promises appear again and again: international teams, growth, impact, strong culture and meaningful products.</p></div>
-    <div class="question"><span>Research question</span><p>How differentiated are the employer brands competing for technology talent in Cyprus?</p></div>
-  </div>
-</section>
-
-<section id="methodology" class="section soft">
-  <div class="shell">
-    <p class="eyebrow">Methodology</p><h2>How I analysed the market</h2>
-    <div class="threecards">
-      <article><b>01</b><h3>Balanced sample</h3><p>30 Cyprus-based or Cyprus-hiring tech employers and three Cyprus-relevant vacancies per employer.</p></article>
-      <article><b>02</b><h3>Five dimensions</h3><p>Specificity, Distinctiveness, Candidate Value Clarity, Evidence and Cross-channel Consistency.</p></article>
-      <article><b>03</b><h3>Quality controls</h3><p>Semantic EVP coding, Logo Swap Test, employer-promise QA and an international senior talent lens.</p></article>
-    </div>
-    <p class="note"><strong>Important:</strong> this study analyses observable employer communication, not actual employee experience. Public outputs contain no company names or company-level rankings.</p>
-
-    <div class="rubric-summary">
-      <p class="eyebrow">Public scoring rubric</p>
-      <h3>How to read the 1–5 scores</h3>
-      <p>The five scoring dimensions use qualitative expert judgement. Version 1.1 formalises the public anchors so readers can see what a low, medium or high score means. The full dimension-by-dimension rubric is published in the methodology.</p>
-      <div class="rubric-scale">
-        <div><b>1</b><span>Absent, generic or inconsistent</span></div>
-        <div><b>2</b><span>Weak, limited or mostly generic</span></div>
-        <div><b>3</b><span>Clear in parts, but mixed</span></div>
-        <div><b>4</b><span>Strong, specific and well supported</span></div>
-        <div><b>5</b><span>Highly specific, ownable and consistently evidenced</span></div>
+<section class="section" id="studies"><div class="wrap">
+  <div class="section-head"><div><h2>Research library</h2></div><p>Open any study as a standalone landing page. New research can be added here without creating a new website.</p></div>
+  <div class="grid">
+    <a class="card cyprus" href="./cyprus-tech-evp/">
+      <div class="visual"><span class="tag">Employer Value Proposition</span><span class="mark">CY</span></div>
+      <div class="body">
+        <h3>Does Cyprus Tech Have an EVP Problem?</h3>
+        <p>A study of recurring words, benefits and employer messages in Cyprus tech vacancies — and where companies start to sound the same.</p>
+        <div class="stats"><span>Cyprus tech</span><span>EVP</span><span>job language</span></div>
+        <div class="open">Open study →</div>
       </div>
-      <a class="rubric-link" href="methodology.md#public-scoring-rubric-1-5">See the full scoring rubric →</a>
-    </div>
+    </a>
+
+    <a class="card no" href="./life-after-no/">
+      <div class="visual"><span class="tag">Candidate Experience</span><span class="mark">NO</span></div>
+      <div class="body">
+        <h3>The Life After NO</h3>
+        <p>Research about rejection messages, what happens after a “no”, and how candidate communication can keep trust and future interest in the company.</p>
+        <div class="stats"><span>rejection emails</span><span>candidate experience</span><span>HR</span></div>
+        <div class="open">Open study →</div>
+      </div>
+    </a>
+
+    <a class="card tech" href="./tech-brand-watch/">
+      <div class="visual"><span class="tag">Tech Employer Brand</span><span class="mark">8/8</span></div>
+      <div class="body">
+        <h3>Tech Brand Watch · Beyond Vacancies</h3>
+        <p>How 14 large IT companies show their engineering life beyond vacancy ads — through content, events, communities, open source, research and other formats.</p>
+        <div class="stats"><span>14 companies</span><span>8 dimensions</span><span>71 activities</span></div>
+        <div class="open">Open study →</div>
+      </div>
+    </a>
   </div>
-</section>
 
-<section class="section research-guide">
-  <div class="shell">
-    <p class="eyebrow">How to read this study</p>
-    <h2>Data, interpretation and recommendation are intentionally separated.</h2>
-    <div class="threecards">
-      <article><b>01</b><h3>Data</h3><p>Observed frequencies, coded themes and 1–5 assessment scores from the sampled employer communication.</p></article>
-      <article><b>02</b><h3>Interpretation</h3><p>What those observed patterns may mean for Employer Brand differentiation. These are researcher judgements, not measured facts.</p></article>
-      <article><b>03</b><h3>Recommendation</h3><p>Practical actions derived from the findings. They are suggestions for practice, not claims about individual employers.</p></article>
-    </div>
+  <div class="about">
+    <div><h2>About the author</h2><p>Olesia Botsieva is an HR marketing and employer brand professional working with tech audiences, recruitment marketing, research and analytics.</p></div>
+    <div class="about-links"><a href="https://olesia.work/" target="_blank" rel="noopener">Portfolio ↗</a><a href="https://www.linkedin.com/in/olesruss/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
   </div>
-</section>
-
-<section id="findings" class="section dark">
-  <div class="shell">
-    <p class="eyebrow">Data · Core finding</p><h2>Employers explain value better than difference.</h2><p class="sectionlead">Candidate value is clear. Distinctiveness is weaker. The 0.70-point gap is the central tension observed in this sample.</p>
-    <div class="scorecard">
-      <div class="score-title"><span>Average score out of 5</span><strong>0.70 gap</strong></div>
-      <div class="scorebars"><div><i style="--v:90.6%"><b>4.53</b></i><span>Candidate Value Clarity</span></div><div><i class="lighter" style="--v:76.6%"><b>3.83</b></i><span>Distinctiveness</span></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="shell">
-    <p class="eyebrow">Data · Shared language</p><h2>The market speaks in a narrow set of promises.</h2><p class="sectionlead muted">These themes are meaningful — but because they are so widespread in the sample, they increasingly function as table stakes rather than differentiators.</p>
-    <div class="hbars" aria-label="Most common candidate-facing EVP themes in 90 job ads">
-      <div><span>International</span><i><b style="width:82.2%"></b></i><strong>82.2%</strong></div>
-      <div><span>Team / Collaboration</span><i><b style="width:81.1%"></b></i><strong>81.1%</strong></div>
-      <div><span>Product / Mission</span><i><b style="width:73.3%"></b></i><strong>73.3%</strong></div>
-      <div><span>Growth</span><i><b style="width:72.2%"></b></i><strong>72.2%</strong></div>
-      <div><span>Impact / Purpose</span><i><b style="width:70%"></b></i><strong>70.0%</strong></div>
-      <div><span>Compensation / Recognition</span><i><b style="width:62.2%"></b></i><strong>62.2%</strong></div>
-      <div><span>Wellbeing</span><i><b style="width:57.8%"></b></i><strong>57.8%</strong></div>
-      <div><span>Flexibility</span><i><b style="width:55.6%"></b></i><strong>55.6%</strong></div>
-      <div><span>Innovation</span><i><b style="width:53.3%"></b></i><strong>53.3%</strong></div>
-      <div><span>Ownership / Autonomy</span><i><b style="width:37.8%"></b></i><strong>37.8%</strong></div>
-    </div>
-  </div>
-</section>
-
-<section class="section soft">
-  <div class="shell">
-    <p class="eyebrow">Interpretation</p><h2>Table stakes are not the issue. Stopping at table stakes is.</h2>
-    <div class="compare"><article><span>Table stakes</span><h3>Reasons to consider an employer</h3><ul><li>International</li><li>Team / Collaboration</li><li>Growth</li><li>Product / Mission</li><li>Impact / Purpose</li></ul></article><article class="accent"><span>Differentiators</span><h3>Reasons to recognise and choose it</h3><ul><li>Product truth</li><li>Owned language</li><li>Distinctive employee identity</li><li>Specific working model</li><li>Employee voice</li><li>Quantified proof</li><li>Recognisable candidate experience</li></ul></article></div>
-    <blockquote class="pull">Differentiation often does not require new EVP themes. It requires more specific and ownable expressions of familiar ones.</blockquote>
-  </div>
-</section>
-
-<section class="section">
-  <div class="shell">
-    <p class="eyebrow">Data · Supporting findings</p>
-    <div class="threecards insights">
-      <article><span>Logo Swap Test</span><h3>Would candidates recognise the employer without its name?</h3><div class="mini"><b>60%</b><p>Pass</p></div><div class="mini secondary"><b>36.7%</b><p>Partial</p></div><p>A meaningful share of career-page communication remains partly interchangeable.</p></article>
-      <article><span>Activation</span><h3>Consistent does not always mean visible.</h3><div class="mini"><b>70%</b><p>scored 4–5/5 for cross-channel consistency</p></div><div class="mini secondary"><b>30%</b><p>showed low recent employer-content presence</p></div></article>
-      <article><span>International talent gap</span><h3>International is everywhere. Relocation clarity is not.</h3><div class="twostat"><div><b>82.2%</b><span>International</span></div><div><b>17.8%</b><span>Relocation / Cyprus</span></div></div><p>Internationality is often communicated as identity, much less often as candidate experience.</p></article>
-    </div>
-  </div>
-</section>
-
-<section class="scenic">
-  <div class="scenic-photo" aria-hidden="true"></div>
-  <div class="shell scenic-inner"><div><p class="eyebrow">Interpretation · Cyprus as a talent destination</p><h2>Location is part of the candidate decision — but it should support the employer truth, not replace it.</h2><p>For internationally mobile senior talent, lifestyle may attract attention. Career substance, clarity and confidence make the opportunity easier to evaluate.</p></div></div>
-</section>
-
-<section class="section soft">
-  <div class="shell">
-    <p class="eyebrow">Interpretation · Why this matters</p><h2>This matters beyond messaging.</h2>
-    <div class="threecards"><article><b>01</b><h3>Strong employers can become harder to distinguish</h3><p>A genuinely different employee experience can still look generic when expressed through category language.</p></article><article><b>02</b><h3>Recruitment communication has to work harder</h3><p>When propositions are interchangeable, candidate choice can shift toward salary, brand awareness, recruiter experience and timing.</p></article><article><b>03</b><h3>International hiring adds another layer of friction</h3><p>Internationally mobile candidates may compare not only employers, but also markets, relocation effort and working models.</p></article></div>
-  </div>
-</section>
-
-<section class="section strategy">
-  <div class="shell">
-    <p class="eyebrow">Recommendation · Strategic point of view</p><h2>I would not start by creating more EVP pillars.</h2><p class="sectionlead muted">I would start by identifying the strongest truth the organisation already owns — then make it specific, provable and repeatable.</p>
-    <div class="flow"><div><span>01</span><b>Ownable Truth</b><small>What belongs specifically to this employer?</small></div><i>→</i><div><span>02</span><b>Evidence</b><small>Why should candidates believe it?</small></div><i>→</i><div><span>03</span><b>Activation</b><small>Where will they repeatedly experience it?</small></div><i>→</i><div><span>04</span><b>Memory</b><small>What will they associate with this employer later?</small></div></div>
-    <div class="lens"><div><p class="eyebrow">Interpretive lens · International senior talent</p><h3>Candidates are not only choosing between companies.</h3><p>They may also be comparing markets, work models, relocation effort and long-term career options.</p></div><div class="lensflow"><span>Role Attractiveness</span><b>→</b><span>Employer Distinctiveness</span><b>→</b><span>Destination Confidence</span></div></div>
-  </div>
-</section>
-
-<section class="section soft">
-  <div class="shell">
-    <p class="eyebrow">Illustrative examples · Recommendation</p>
-    <h2>From generic promise to ownable expression.</h2>
-    <p class="sectionlead muted">These are illustrative rewrites, not quotations from sampled employers. Bracketed details show where an employer would insert its own evidence.</p>
-    <div class="threecards examplecards">
-      <article>
-        <span class="example-tag">International</span>
-        <h3>Before</h3><p class="example-before">“Join an international team.”</p>
-        <h3>After</h3><p>“Build [product] with teams across [markets / locations], using [specific collaboration model] and owning [cross-market responsibility].”</p>
-        <small>Why stronger: it explains what “international” changes about the actual work.</small>
-      </article>
-      <article>
-        <span class="example-tag">Growth</span>
-        <h3>Before</h3><p class="example-before">“We support your professional growth.”</p>
-        <h3>After</h3><p>“Grow through [career paths], [learning mechanism] and a clear [promotion / feedback practice] that shows how progression happens.”</p>
-        <small>Why stronger: the promise is connected to a visible mechanism.</small>
-      </article>
-      <article>
-        <span class="example-tag">Impact</span>
-        <h3>Before</h3><p class="example-before">“Make an impact.”</p>
-        <h3>After</h3><p>“Own [specific product / problem] used by [audience / scale], with direct responsibility for [decision or outcome].”</p>
-        <small>Why stronger: impact becomes concrete, bounded and believable.</small>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="recommendations" class="section dark">
-  <div class="shell"><p class="eyebrow">Recommendations</p><h2>Seven practical moves from insight to action.</h2><div class="recs"><article><b>01</b><h3>Find an ownable truth</h3><p>Build around something competitors cannot credibly copy.</p></article><article><b>02</b><h3>Move from promises to proof</h3><p>Use Promise → Practice → Proof.</p></article><article><b>03</b><h3>Make job ads part of Employer Brand</h3><p>Keep one role-specific and one employer-specific reason to choose.</p></article><article><b>04</b><h3>Activate for memory</h3><p>Repeat the same strategic meaning across different formats.</p></article><article><b>05</b><h3>Make internationality practical</h3><p>Explain what joining internationally actually looks like.</p></article><article><b>06</b><h3>Let employees prove the EVP</h3><p>Use real employee experience as evidence.</p></article><article><b>07</b><h3>Measure distinctiveness</h3><p>Track whether the employer becomes easier to recognise and remember.</p></article></div></div>
-</section>
-
-<section class="section final"><div class="shell finalbox"><p class="eyebrow">Final takeaway</p><h2>The next stage of Employer Brand maturity is not about saying more.</h2><p>It is about making the employer truth more specific, more believable and easier to remember.</p><strong>Across this sample, the opportunity is greater differentiation — and more consistent activation of what employers already genuinely own.</strong></div></section>
-
-<section id="about" class="section">
-  <div class="shell about"><div><p class="eyebrow">About this research</p><h2>Independent, personal and transparent by design.</h2><p>This is an independent personal research project created out of professional curiosity and genuine interest in the Cyprus tech market. It is not a ranking of employers, not a definitive truth, and not a measure of actual employee experience.</p><p>It reflects one structured interpretation of publicly observable employer communication at a specific point in time. The methodology, limitations and anonymised research materials used for the public analysis are published openly for transparency.</p><p>This work was created with great respect and sincere appreciation for Cyprus-based companies and the people behind them.</p><p><strong>Research snapshot:</strong> September 2026 · <strong>Version:</strong> 1.1</p></div><aside><h3>Reproducibility & transparency</h3><ul><li>Public outputs use anonymised company identifiers only.</li><li>Methodology, scoring logic, semantic coding rules and limitations are documented.</li><li>Identifying company URLs are withheld to preserve anonymisation.</li><li>AI supported research organisation, semantic QA, synthesis and drafting; it was not treated as an independent evidence source.</li><li>Final methodology, coding decisions, interpretation and conclusions remained researcher-controlled.</li></ul><div class="openlinks"><a href="methodology.md">Read the methodology</a><a href="data/job-theme-frequency.csv">Open the aggregated data</a></div></aside></div>
-</section>
+</div></section>
 </main>
-<footer><div class="footerphoto" aria-hidden="true"></div><div class="shell footerinner"><div><strong>Olesia Botsieva</strong><span>Employer Brand · Recruitment Marketing · Research & Analytics</span><a href="https://www.linkedin.com/in/olesruss/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div><p>Independent personal research · Cyprus Tech EVP Study 2026<br/>30 employers · 90 job ads · 30 career pages</p></div></footer>
+
+<footer><div class="wrap">Olesia Botsieva · Independent employer brand research · 2026</div></footer>
 </body>
 </html>
