@@ -182,6 +182,33 @@ a:hover{color:var(--green)}
 .gap{color:#7b5b12}
 .caution{color:#5b6570}
 
+/* 2GIS meaning + market signals */
+.meaning-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:22px}
+.meaning-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:var(--shadow-soft)}
+.meaning-label{display:inline-block;font-size:10px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:var(--green-dark);margin-bottom:10px}
+.meaning-card h3{font-size:18px;line-height:1.25;margin:0 0 10px;letter-spacing:-.02em}
+.meaning-card p{font-size:13px;color:#5b635c;margin:0;line-height:1.55}
+.market-signals{background:#fff;border:1px solid var(--line);border-radius:26px;padding:22px;box-shadow:var(--shadow-soft)}
+.market-signals-head{display:flex;justify-content:space-between;gap:20px;align-items:flex-end;margin-bottom:16px}
+.market-signals-head h3{font-size:22px;margin:0 0 4px;letter-spacing:-.03em}
+.market-signals-head p{font-size:13px;color:var(--muted);margin:0}
+.market-signals-head>span{font-size:11px;color:#777f79;white-space:nowrap}
+.signal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.signal-card{border-radius:18px;padding:15px;border:1px solid #e5e8e4;background:#f7f8f6}
+.signal-card b,.signal-card strong,.signal-card span{display:block}
+.signal-card b{font-size:24px;letter-spacing:-.04em;margin-bottom:6px}
+.signal-card strong{font-size:12px;line-height:1.25}
+.signal-card span{font-size:10px;margin-top:7px;font-weight:800}
+.signal-card.standard{background:#eff9ef;border-color:#d8edd9}
+.signal-card.standard b,.signal-card.standard span{color:var(--green-dark)}
+.signal-card.common{background:#f5f8f4}
+.signal-card.common b{color:#4f6d52}
+.signal-card.common span{color:#657767}
+.signal-card.rare{background:#f8f8f6}
+.signal-card.rare b{color:#535b55}
+.signal-card.rare span{color:#777f79}
+.signal-rule{font-size:11px;color:#69716b;margin:14px 2px 0;line-height:1.5}
+
 /* trends */
 .trends{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .trend-card{
@@ -315,6 +342,8 @@ summary{cursor:pointer;color:var(--green-dark);font-weight:800;font-size:13px}
 #lens .wrap,#global .wrap{position:relative;z-index:2}
 
 @media(max-width:900px){
+  .meaning-grid{grid-template-columns:1fr}
+  .signal-grid{grid-template-columns:1fr 1fr}
   .score-explain,.category-grid{grid-template-columns:1fr 1fr}
   .links{display:none}
   .hero{padding:56px 0}
@@ -329,6 +358,8 @@ summary{cursor:pointer;color:var(--green-dark);font-weight:800;font-size:13px}
   .section{padding:52px 0}
 }
 @media(max-width:620px){
+  .market-signals-head{align-items:flex-start;flex-direction:column}
+  .signal-grid{grid-template-columns:1fr}
   .score-explain,.category-grid{grid-template-columns:1fr}
   .wrap{padding:0 16px}
   .nav{height:58px}
@@ -417,12 +448,48 @@ summary{cursor:pointer;color:var(--green-dark);font-weight:800;font-size:13px}
 <div class="chart-card"><h3>Где 2ГИС относительно выборки</h3><p>Только по числу подтверждённых направлений из восьми.</p><div class="compare-bars"><div class="compare-line ours"><b>2ГИС</b><div class="track"><div class="fill" style="width:50%"></div></div><strong>4/8</strong></div><div class="compare-line"><b>Среднее</b><div class="track"><div class="fill" style="width:57.125%"></div></div><strong>4,57/8</strong></div><div class="compare-line"><b>Максимум</b><div class="track"><div class="fill" style="width:75%"></div></div><strong>6/8</strong></div></div><div class="chart-note"><strong>Вывод:</strong> 2ГИС сейчас немного ниже среднего по широте публичных механик. Это не означает более низкую привлекательность работодателя: исследование не измеряет оффер, зарплату, eNPS или candidate experience.</div></div>
 </div></div></section>
 <section class="section white" id="matrix"><div class="wrap"><div class="section-head"><div><h2>Матрица: кто что делает</h2><p><strong>✓ = есть хотя бы одна подтверждённая активность за квартал.</strong> «–» означает, что в текущем срезе мы такую активность не подтвердили. Последний столбец — просто сумма зелёных точек.</p></div></div><div class="two-col"><div class="panel table-scroll"><table class="matrix"><thead><tr><th>Компания</th><th>Технический контент</th><th>События</th><th>Профессиональное сообщество</th><th>Инженеры как эксперты</th><th>Образование</th><th>Исследования</th><th>Открытый код</th><th>Нестандартные форматы</th><th>Итого направлений</th></tr></thead><tbody><tr class=""><td><strong>Яндекс</strong></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot on">✓</span></td><td title="Профессиональное сообщество"><span class="dot on">✓</span></td><td title="Инженеры как эксперты"><span class="dot off">–</span></td><td title="Образование"><span class="dot on">✓</span></td><td title="Исследования"><span class="dot on">✓</span></td><td title="Открытый код"><span class="dot on">✓</span></td><td title="Нестандартные форматы"><span class="dot off">–</span></td><td><strong>6/8</strong></td></tr><tr class=""><td><strong>Avito</strong></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot on">✓</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot on">✓</span></td><td title="Образование"><span class="dot on">✓</span></td><td title="Исследования"><span class="dot off">–</span></td><td title="Открытый код"><span class="dot on">✓</span></td><td title="Нестандартные форматы"><span class="dot on">✓</span></td><td><strong>6/8</strong></td></tr><tr class=""><td><strong>Kaspersky</strong></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot on">✓</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot off">–</span></td><td title="Образование"><span class="dot on">✓</span></td><td title="Исследования"><span class="dot on">✓</span></td><td title="Открытый код"><span class="dot on">✓</span></td><td title="Нестандартные форматы"><span class="dot on">✓</span></td><td><strong>6/8</strong></td></tr><tr class=""><td><strong>Positive Technologies</strong></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot on">✓</span></td><td title="Профессиональное сообщество"><span class="dot on">✓</span></td><td title="Инженеры как эксперты"><span class="dot on">✓</span></td><td title="Образование"><span class="dot on">✓</span></td><td title="Исследования"><span class="dot on">✓</span></td><td title="Открытый код"><span class="dot off">–</span></td><td title="Нестандартные форматы"><span class="dot off">–</span></td><td><strong>6/8</strong></td></tr><tr class=""><td><strong>Т-Банк</strong></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot on">✓</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot on">✓</span></td><td title="Образование"><span class="dot on">✓</span></td><td title="Исследования"><span class="dot off">–</span></td><td title="Открытый код"><span class="dot on">✓</span></td><td title="Нестандартные форматы"><span class="dot off">–</span></td><td><strong>5/8</strong></td></tr><tr class=""><td><strong>MTS Tech</strong></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot on">✓</span></td><td title="Профессиональное сообщество"><span class="dot on">✓</span></td><td title="Инженеры как эксперты"><span class="dot off">–</span></td><td title="Образование"><span class="dot on">✓</span></td><td title="Исследования"><span class="dot off">–</span></td><td title="Открытый код"><span class="dot off">–</span></td><td title="Нестандартные форматы"><span class="dot on">✓</span></td><td><strong>5/8</strong></td></tr><tr class=""><td><strong>Ozon Tech</strong></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot on">✓</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot off">–</span></td><td title="Образование"><span class="dot on">✓</span></td><td title="Исследования"><span class="dot off">–</span></td><td title="Открытый код"><span class="dot on">✓</span></td><td title="Нестандартные форматы"><span class="dot on">✓</span></td><td><strong>5/8</strong></td></tr><tr class=""><td><strong>YADRO</strong></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot on">✓</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot on">✓</span></td><td title="Образование"><span class="dot on">✓</span></td><td title="Исследования"><span class="dot off">–</span></td><td title="Открытый код"><span class="dot off">–</span></td><td title="Нестандартные форматы"><span class="dot on">✓</span></td><td><strong>5/8</strong></td></tr><tr class="is-2gis"><td><strong>2ГИС</strong><span class="you">мы</span></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot on">✓</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot off">–</span></td><td title="Образование"><span class="dot off">–</span></td><td title="Исследования"><span class="dot off">–</span></td><td title="Открытый код"><span class="dot on">✓</span></td><td title="Нестандартные форматы"><span class="dot on">✓</span></td><td><strong>4/8</strong></td></tr><tr class=""><td><strong>Контур</strong></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot on">✓</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot off">–</span></td><td title="Образование"><span class="dot off">–</span></td><td title="Исследования"><span class="dot on">✓</span></td><td title="Открытый код"><span class="dot on">✓</span></td><td title="Нестандартные форматы"><span class="dot off">–</span></td><td><strong>4/8</strong></td></tr><tr class=""><td><strong>VK</strong></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot on">✓</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot off">–</span></td><td title="Образование"><span class="dot on">✓</span></td><td title="Исследования"><span class="dot off">–</span></td><td title="Открытый код"><span class="dot on">✓</span></td><td title="Нестандартные форматы"><span class="dot off">–</span></td><td><strong>4/8</strong></td></tr><tr class=""><td><strong>Альфа-Банк</strong></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot off">–</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot off">–</span></td><td title="Образование"><span class="dot on">✓</span></td><td title="Исследования"><span class="dot on">✓</span></td><td title="Открытый код"><span class="dot off">–</span></td><td title="Нестандартные форматы"><span class="dot off">–</span></td><td><strong>3/8</strong></td></tr><tr class=""><td><strong>SberTech</strong></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot on">✓</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot off">–</span></td><td title="Образование"><span class="dot off">–</span></td><td title="Исследования"><span class="dot off">–</span></td><td title="Открытый код"><span class="dot on">✓</span></td><td title="Нестандартные форматы"><span class="dot off">–</span></td><td><strong>3/8</strong></td></tr><tr class=""><td><strong>X5 Tech</strong></td><td title="Технический контент"><span class="dot on">✓</span></td><td title="События"><span class="dot off">–</span></td><td title="Профессиональное сообщество"><span class="dot off">–</span></td><td title="Инженеры как эксперты"><span class="dot off">–</span></td><td title="Образование"><span class="dot on">✓</span></td><td title="Исследования"><span class="dot off">–</span></td><td title="Открытый код"><span class="dot off">–</span></td><td title="Нестандартные форматы"><span class="dot off">–</span></td><td><strong>2/8</strong></td></tr></tbody></table></div><div class="panel"><h3 style="margin-top:0">Итого направлений, 0–8</h3><p class="muted" style="font-size:13px">Каждое подтверждённое направление даёт 1 балл. Максимум — 8. Больше баллов = больше разных форматов, а не «лучший работодатель».</p><div class="score-row "><div class="score-name">Яндекс</div><div class="bar"><span style="width:75%"></span></div><div class="score-value">6/8</div></div><div class="score-row "><div class="score-name">Avito</div><div class="bar"><span style="width:75%"></span></div><div class="score-value">6/8</div></div><div class="score-row "><div class="score-name">Kaspersky</div><div class="bar"><span style="width:75%"></span></div><div class="score-value">6/8</div></div><div class="score-row "><div class="score-name">Positive Technologies</div><div class="bar"><span style="width:75%"></span></div><div class="score-value">6/8</div></div><div class="score-row "><div class="score-name">Т-Банк</div><div class="bar"><span style="width:62.5%"></span></div><div class="score-value">5/8</div></div><div class="score-row "><div class="score-name">MTS Tech</div><div class="bar"><span style="width:62.5%"></span></div><div class="score-value">5/8</div></div><div class="score-row "><div class="score-name">Ozon Tech</div><div class="bar"><span style="width:62.5%"></span></div><div class="score-value">5/8</div></div><div class="score-row "><div class="score-name">YADRO</div><div class="bar"><span style="width:62.5%"></span></div><div class="score-value">5/8</div></div><div class="score-row focus"><div class="score-name">2ГИС</div><div class="bar"><span style="width:50%"></span></div><div class="score-value">4/8</div></div><div class="score-row "><div class="score-name">Контур</div><div class="bar"><span style="width:50%"></span></div><div class="score-value">4/8</div></div><div class="score-row "><div class="score-name">VK</div><div class="bar"><span style="width:50%"></span></div><div class="score-value">4/8</div></div><div class="score-row "><div class="score-name">Альфа-Банк</div><div class="bar"><span style="width:37.5%"></span></div><div class="score-value">3/8</div></div><div class="score-row "><div class="score-name">SberTech</div><div class="bar"><span style="width:37.5%"></span></div><div class="score-value">3/8</div></div><div class="score-row "><div class="score-name">X5 Tech</div><div class="bar"><span style="width:25%"></span></div><div class="score-value">2/8</div></div></div></div></div></section>
-<section class="section" id="lens"><div class="wrap"><div class="panel lens"><div class="section-head"><div><h2>Где здесь 2ГИС</h2><p>Что результат 4/8 означает на простом языке.</p></div></div><div class="lens-grid"><div><div class="bigscore">4/8</div><div class="compare">Среднее по выборке — <strong>4,57/8</strong>. У 2ГИС подтверждены 4 направления: технический контент, события, открытый код и нестандартные форматы.</div><p><strong>Простыми словами:</strong> 2ГИС выглядит содержательно и разнообразно, но рынок оказался активнее, чем показывал первый проход. Мы не ниже рынка «как работодатель» — мы пока используем меньше типов публичных tech-brand механик.</p></div><div class="lens-list">
-<div class="lens-item"><strong class="good">✓ Базовые форматы есть</strong>Технический контент есть у 14/14 компаний, события — у 12/14. У 2ГИС оба направления подтверждены.</div>
-<div class="lens-item"><strong class="good">✓ Есть то, что можно проверить</strong>RiverBoat даёт балл за открытый код, а Pause/Break ко Дню программиста — за нестандартный формат.</div>
-<div class="lens-item"><strong class="gap">→ Самое массовое направление, которого пока нет: образование</strong>Образовательные программы подтверждены у 11 из 14 компаний. У 2ГИС в текущем Q3-срезе такого направления пока нет.</div>
-<div class="lens-item"><strong class="caution">Редкие направления, где можно отличаться</strong>Исследования есть у 5/14 компаний, инженеры как регулярные эксперты — у 4/14, постоянные профессиональные сообщества — у 3/14. Эти форматы встречаются реже.</div>
-</div></div></div></div></section>
+<section class="section" id="lens"><div class="wrap">
+  <div class="section-head"><div>
+    <h2>Что это значит для 2ГИС</h2>
+    <p>Не список рекомендаций, а три коротких вывода из текущего среза.</p>
+  </div><div class="note"><strong>4/8 у 2ГИС</strong><br>Среднее по выборке — 4,57/8. Это число показывает только разнообразие публичных форматов.</div></div>
+
+  <div class="meaning-grid">
+    <div class="meaning-card">
+      <span class="meaning-label">01 · База рынка</span>
+      <h3>Контент и события у нас есть. Образование — главный заметный пробел.</h3>
+      <p>Технический контент есть у 14/14 компаний, события — у 12/14, образование — у 11/14. Первые два направления у 2ГИС подтверждены, образование в текущем Q3-срезе — пока нет.</p>
+    </div>
+    <div class="meaning-card">
+      <span class="meaning-label">02 · Наши сильные стороны</span>
+      <h3>Есть форматы, которые показывают реальную инженерную работу и запоминаются.</h3>
+      <p>RiverBoat даёт 2ГИС подтверждённый Open Source, а Pause/Break — нестандартный tech-brand формат. Это не просто коммуникация: у аудитории есть конкретное доказательство или опыт взаимодействия с брендом.</p>
+    </div>
+    <div class="meaning-card">
+      <span class="meaning-label">03 · Что наблюдать</span>
+      <h3>Не нужно собирать все 8 баллов. Важно не пропускать базу и видеть редкие возможности.</h3>
+      <p>Исследования есть у 5/14 компаний, инженеры как регулярные эксперты — у 4/14, постоянные сообщества — у 3/14. Эти направления пока не обязательны для всех, но именно там можно отличаться.</p>
+    </div>
+  </div>
+
+  <div class="market-signals">
+    <div class="market-signals-head">
+      <div><h3>Сигналы рынка</h3><p>Чтобы было видно не только «есть / нет», но и насколько каждый формат уже распространён.</p></div>
+      <span>Q3 2026 · 14 компаний</span>
+    </div>
+    <div class="signal-grid">
+      <div class="signal-card standard"><b>14/14</b><strong>Технический контент</strong><span>База рынка</span></div>
+      <div class="signal-card standard"><b>12/14</b><strong>События</strong><span>База рынка</span></div>
+      <div class="signal-card standard"><b>11/14</b><strong>Образование</strong><span>Почти стандарт</span></div>
+      <div class="signal-card common"><b>9/14</b><strong>Открытый код</strong><span>Широко распространено</span></div>
+      <div class="signal-card common"><b>6/14</b><strong>Нестандартные форматы</strong><span>Заметный сигнал</span></div>
+      <div class="signal-card rare"><b>5/14</b><strong>Исследования</strong><span>Пока редкость</span></div>
+      <div class="signal-card rare"><b>4/14</b><strong>Инженеры как эксперты</strong><span>Пока редкость</span></div>
+      <div class="signal-card rare"><b>3/14</b><strong>Профессиональное сообщество</strong><span>Возможность отличаться</span></div>
+    </div>
+    <p class="signal-rule"><strong>Как читать:</strong> чем чаще формат встречается у компаний выборки, тем ближе он к базовому ожиданию рынка. Редкие форматы не «лучше» — они просто дают больше пространства для отличия.</p>
+  </div>
+</div></section>
 <section class="section white" id="trends"><div class="wrap"><div class="section-head"><div><h2>Тренды квартала</h2><p>Не прогнозы и не «мода». Ниже — только форматы, которые реально встретились в текущем срезе.</p></div></div><div class="trends"><article class="trend-card">
    <div class="trend-top"><span class="trend-count">9/14</span><span class="badge">уже распространён</span></div>
    <h3>Открытый код как постоянное доказательство</h3>
